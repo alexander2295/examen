@@ -110,6 +110,7 @@ public class InfoUserActivity extends AppCompatActivity {
                 pais.setText(owner.getPais());
                 apellido.setText(owner.getApellido());
                 setTitle("Cedula: " + owner.getCedula());
+                mostrarSeguidores(owner.getCedula());
             }
 
             @Override
@@ -125,7 +126,7 @@ public class InfoUserActivity extends AppCompatActivity {
     private void mostrarSeguidores(String loginName){
         GitHubAdapter adapter = new GitHubAdapter();
 
-        Call<List<Owner>> call = adapter.getOwnerFollowers();
+        Call<List<Owner>> call = adapter.getOwnerFollowers(loginName);
         call.enqueue(new Callback<List<Owner>>() {
             @Override
             public void onResponse(Call<List<Owner>> call, Response<List<Owner>> response) {

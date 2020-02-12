@@ -34,10 +34,9 @@ public class AdaptadorFollowers extends RecyclerView.Adapter<AdaptadorFollowers.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderFollowers holder, int position) {
-        holder.etiNombre.setText(listaFollowers.get(position).getCiudad());
-        //holder.foto.setImageResource(listaFollowers.get(position).get);
-
-        //Picasso.get().load(listaFollowers.get(position).getAvatarUrl()).into(holder.foto);
+        holder.etiNombre.setText(listaFollowers.get(position).getNombre());
+        holder.cedula.setText(listaFollowers.get(position).getCedula());
+        holder.estado.setText(listaFollowers.get(position).getEstado());
     }
 
     @Override
@@ -47,14 +46,16 @@ public class AdaptadorFollowers extends RecyclerView.Adapter<AdaptadorFollowers.
 
     public class ViewHolderFollowers extends RecyclerView.ViewHolder {
 
-        TextView etiNombre;
-        ImageView foto;
+        TextView etiNombre, cedula ,estado;
+
 
         public ViewHolderFollowers(View itemView) {
             super(itemView);
 
-            etiNombre = (TextView) itemView.findViewById(R.id.textViewLista);
-            foto = (ImageView) itemView.findViewById(R.id.imageViewLista);
+            etiNombre = itemView.findViewById(R.id.textViewLista);
+            cedula = itemView.findViewById(R.id.cedula);
+            estado = itemView.findViewById(R.id.estado);
+
         }
     }
 }

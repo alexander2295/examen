@@ -6,19 +6,52 @@ android:layout_height="wrap_content"
 android:orientation="horizontal"
 android:gravity="center">
 
-<ImageView
-    android:id="@+id/imageViewLista"
-    android:layout_margin="5dp"
-    android:src="@mipmap/ic_launcher"
-    android:layout_width="100dp"
-    android:layout_height="100dp" />
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_weight="2"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <TextView
+        android:text="Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold" />
+    <TextView
+        android:text="cedula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold" />
+    <TextView
+        android:text="estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"/>
+</LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textViewLista"
+            android:text="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textViewDatos"/>
+        <TextView
+            android:id="@+id/cedula"
+            android:text="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textViewDatos" />
+        <TextView
+            android:id="@+id/estado"
+            android:text="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textViewDatos" />
+    </LinearLayout>
 
-<TextView
-    android:id="@+id/textViewLista"
-    android:text="@string/app_name"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    style="@style/textViewDatos"
-    android:layout_marginLeft="10dp"/>
+
 
 </LinearLayout>

@@ -27,6 +27,10 @@ public class Owner {
     private String pais;
 
 
+    @SerializedName("estado")
+    private String estado;
+
+
 
     @SerializedName("login")
     private String login;
@@ -167,6 +171,15 @@ public class Owner {
 
     public void setPais(String pais) {
         this.pais = pais;
+    }
+
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public String getLogin() {

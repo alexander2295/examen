@@ -14,7 +14,7 @@ public interface GitHubService {
     Call<Owner> getOwner(@Path("cedulaestudiante") String owner);
 
     @GET(ApiConstants.GITHUB_FOLLOWERS_ENDPOINT)
-    Call<List<Owner>> getOwnerFollowers();
+    Call<List<Owner>> getOwnerFollowers(@Path("cedulaestudiante") String owner);
 
 
 }

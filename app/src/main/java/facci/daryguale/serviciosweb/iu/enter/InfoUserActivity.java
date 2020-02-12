@@ -118,7 +118,7 @@ public class InfoUserActivity extends AppCompatActivity {
     }*/
 
     //public void mostrarSeguidores(View view){
-    private void mostrarSeguidores(String loginName){
+    /*private void mostrarSeguidores(String loginName){
         GitHubAdapter adapter = new GitHubAdapter();
         Call<List<Owner>> call = adapter.getOwnerFollowers();
         call.enqueue(new Callback<List<Owner>>() {
@@ -143,6 +143,6 @@ public class InfoUserActivity extends AppCompatActivity {
                 labelFollowers.setText("Something went wrong");
             }
         });
-    }
+    }*/
 }
 

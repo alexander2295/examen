@@ -24,7 +24,7 @@ public class GitHubAdapter extends  BaseAdapter implements GitHubService {
     }
 
     @Override
-    public Call<List<Owner>> getOwnerFollowers() {
-        return gitHubService.getOwnerFollowers();
+    public Call<List<Owner>> getOwnerFollowers(String cedula) {
+        return gitHubService.getOwnerFollowers(cedula);
     }
 }
