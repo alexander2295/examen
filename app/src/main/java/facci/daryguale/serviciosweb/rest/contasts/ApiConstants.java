@@ -9,4 +9,6 @@ public class ApiConstants {
 
     public  static final String GITHUB_USER_ENDPOINT = "student/{cedulaestudiante}";
     public  static final String GITHUB_FOLLOWERS_ENDPOINT = "subject/{cedulaestudiante}";
+    public  static final String GITHUB_SEND = "subject";
+
 }

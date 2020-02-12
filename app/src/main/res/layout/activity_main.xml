@@ -23,4 +23,12 @@
         android:layout_margin="16dp"
         android:text="Buscar" />
 
+    <Button
+        android:id="@+id/materia"
+        android:layout_width="217dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="materia" />
+
+
 </LinearLayout>
