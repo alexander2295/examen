@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="enter_user_button" type="id" />
+    <item name="enter_user_edit_text" type="id" />
+    <item name="textViewLista" type="id" />
+    <item name="imageViewLista" type="id" />
+    <item name="textViewFollowing" type="id" />
+    <item name="textViewRepositories" type="id" />
+    <item name="imageViewProfile" type="id" />
+    <item name="progressBar" type="id" />
+    <item name="recyclerViewFollowers" type="id" />
+</resources>
