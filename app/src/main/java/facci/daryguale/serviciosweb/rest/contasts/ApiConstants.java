@@ -7,6 +7,6 @@ public class ApiConstants {
     //https://api.github.com/users/jsinix
     //https://api.github.com/users/jsinix/followers
 
-    public  static final String GITHUB_USER_ENDPOINT = "teacher/{cedulaprofesor}";
-    public  static final String GITHUB_FOLLOWERS_ENDPOINT = "student";
+    public  static final String GITHUB_USER_ENDPOINT = "student/{cedulaestudiante}";
+    public  static final String GITHUB_FOLLOWERS_ENDPOINT = "subject/{cedulaestudiante}";
 }

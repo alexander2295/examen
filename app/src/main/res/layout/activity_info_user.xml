@@ -14,11 +14,7 @@
         android:gravity="center"
         android:layout_margin="10dp">
 
-        <ImageView
-            android:id="@+id/imageViewProfile"
-            android:layout_width="50dp"
-            android:layout_height="100dp"
-            android:src="@mipmap/ic_launcher" />
+
 
         <LinearLayout android:orientation="vertical"
             android:gravity="center">
@@ -27,15 +23,26 @@
                 android:id="@+id/labelRepositories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/repositories"
+                android:text="nombre"
                 style="@style/textViewDatos"
                 />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="apellido"
+                style="@style/textViewDatos"/>
             <TextView
                 android:id="@+id/labelFollowing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/following"
+                android:text="ciudad"
                 style="@style/textViewDatos"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="pais"
+                style="@style/textViewDatos"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -49,16 +56,25 @@
                 android:text="0"
                 style="@style/textViewDatos"/>
             <TextView
+                android:id="@+id/apellido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                style="@style/textViewDatos"/>
+            <TextView
                 android:id="@+id/textViewFollowing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0"
                 style="@style/textViewDatos"/>
+            <TextView
+                android:id="@+id/pais"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                style="@style/textViewDatos"/>
         </LinearLayout>
-
     </TableRow>
-
-
     <TableRow >
         <View
             android:layout_width="match_parent"

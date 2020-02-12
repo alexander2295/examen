@@ -11,7 +11,7 @@ import retrofit2.http.Path;
 public interface GitHubService {
 
     @GET(ApiConstants.GITHUB_USER_ENDPOINT)
-    Call<Owner> getOwner(@Path("cedulaprofesor") Integer owner);
+    Call<Owner> getOwner(@Path("cedulaestudiante") String owner);
 
     @GET(ApiConstants.GITHUB_FOLLOWERS_ENDPOINT)
     Call<List<Owner>> getOwnerFollowers();

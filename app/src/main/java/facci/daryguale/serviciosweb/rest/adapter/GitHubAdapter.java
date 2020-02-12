@@ -19,7 +19,7 @@ public class GitHubAdapter extends  BaseAdapter implements GitHubService {
 
 
     @Override
-    public Call<Owner> getOwner(Integer owner) {
+    public Call<Owner> getOwner(String owner) {
         return gitHubService.getOwner(owner);
     }
 

@@ -29,7 +29,7 @@ public class InfoUserActivity extends AppCompatActivity {
     ArrayList<Owner> listaFollowers;
     RecyclerView recyclerViewFollowers;
 
-    TextView textViewRepositories, textViewFollowing;
+    TextView textViewRepositories, textViewFollowing, pais, apellido;
     ImageView imageViewProfile;
 
     ProgressBar progressBar;
@@ -40,6 +40,8 @@ public class InfoUserActivity extends AppCompatActivity {
         setContentView(R.layout.activity_info_user);
         textViewFollowing = findViewById(R.id.textViewFollowing);
         textViewRepositories = findViewById(R.id.textViewRepositories);
+        apellido = findViewById(R.id.apellido);
+        pais = findViewById(R.id.pais);
         imageViewProfile = (ImageView) findViewById(R.id.imageViewProfile);
 
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
@@ -91,20 +93,23 @@ public class InfoUserActivity extends AppCompatActivity {
 
     private void mostrarDatosBasicos(String loginName){
 
-        int cedula = Integer.parseInt(loginName);
+        //int cedula = Integer.parseInt(loginName);
 
         GitHubAdapter adapter = new GitHubAdapter();
 
 
-        Call<Owner> call = adapter.getOwner(cedula);
+        Call<Owner> call = adapter.getOwner(loginName);
         call.enqueue(new Callback<Owner>() {
 
             @Override
             public void onResponse(Call<Owner> call, Response<Owner> response) {
                 Owner owner = response.body();
+                // carga los datos que reciben la consulta
                 textViewRepositories.setText(owner.getNombre());
                 textViewFollowing.setText(owner.getCiudad());
-                mostrarSeguidores(owner.getCedula());
+                pais.setText(owner.getPais());
+                apellido.setText(owner.getApellido());
+                setTitle("Cedula: " + owner.getCedula());
             }
 
             @Override

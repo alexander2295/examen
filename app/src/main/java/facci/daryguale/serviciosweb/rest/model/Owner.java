@@ -12,6 +12,10 @@ public class Owner {
     private String nombre;
 
 
+    @SerializedName("apellido")
+    private String apellido;
+
+
     @SerializedName("ciudad")
     private String ciudad;
 
@@ -129,6 +133,14 @@ public class Owner {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public String getCiudad() {
